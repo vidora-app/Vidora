@@ -18,6 +18,45 @@ Toàn bộ file nằm ở [trang Releases](https://github.com/vidora-app/Vidora/
 
 ## Tính năng
 
+### Trích phụ đề cháy trong hình
+
+Phụ đề đã nung vào khung hình thì không có file nào để lấy ra. Vidora đọc thẳng
+từ hình ảnh và dựng lại thành phụ đề có thể sửa được.
+
+**Nhận diện không phụ thuộc chữ viết.** Bộ dò làm việc bằng tương phản nét, cạnh
+và thành phần liên thông — không phải bằng hình dạng ký tự. Nó tìm ra dòng phụ
+đề bất kể đó là chữ Hán, kana, Hangul, Kirin, Ả Rập, Devanagari hay Latin.
+
+**70 mã ngôn ngữ, 8 đầu nhận dạng riêng.** Mỗi hệ chữ đi vào đúng model của nó:
+Trung giản thể và phồn thể, Nhật, Hàn, Latin (41 ngôn ngữ, có tiếng Việt), Kirin
+(10), Ả Rập (6), Devanagari (7), Hy Lạp, Thái. Định tuyến sai một hệ chữ không
+cho ra chữ xấu — nó cho ra chuỗi rỗng — nên bảng định tuyến được kiểm tra chặt.
+
+**Bám theo phụ đề di chuyển.** Một khung cố định không đủ: chỗ phụ đề trượt đi
+thì lọt ra ngoài, chỗ khung quét qua thì che nhầm nền trống. Vidora theo dõi
+từng dòng phụ đề từ lúc hiện tới lúc tắt, ghép vết bằng IoU, tâm, chiều cao,
+chiều rộng và nội dung, tối đa 12 vùng trên một video.
+
+**Phân biệt phụ đề với watermark bằng hành vi, không bằng độ tin cậy.** OCR đọc
+watermark rõ y như đọc lời thoại, nên điểm tin cậy không giúp gì. Vidora chấm
+theo cách chữ *cư xử theo thời gian*: một dòng thoại chia màn hình với gần như
+không gì khác, còn watermark sống lâu hơn hàng chục dòng không liên quan và quay
+lại sau những khoảng trống. Bằng chứng yếu thì giữ nguyên dòng — mất một câu
+thoại thật tệ hơn nhiều so với sót một dòng thừa.
+
+**Ba chế độ.** Nhanh dùng cặp model gọn để đổi độ chính xác lấy tốc độ. Tự động
+và Chính xác dùng model nặng hơn, và Chính xác còn chạy thêm bước khôi phục dòng
+để một dòng OCR hợp lệ không bị mất chỉ vì bộ dò hình ảnh không dựng được ứng
+viên.
+
+**Chạy được video dài.** Bộ theo dõi chỉ giữ ảnh đại diện đang hoạt động cùng
+vài khung chờ, nên bộ nhớ không phình theo độ dài video. Kết quả OCR được lưu
+đệm bền theo danh tính suy luận và bằng chứng ảnh, nên chạy lại không làm lại
+việc cũ. Có GPU thì dùng CUDA, không có thì tự lùi về CPU.
+
+Sau khi trích xong, mở thẳng trong Subtitle Workshop để sửa, hoặc đưa qua dịch
+và lồng tiếng.
+
 ### Tải video
 
 **YouTube** — dán một URL, nhiều URL, hoặc tìm bằng từ khoá. Chọn video hay chỉ
@@ -38,10 +77,6 @@ chất lượng và bộ lọc từ khoá; nội dung mới về hàng đợi m�
 
 **Tạo phụ đề từ giọng nói** — nhận dạng chạy cục bộ, có mốc thời gian từng từ,
 tự dò ngôn ngữ, xử lý được video dài nhiều giờ và tiếp tục được nếu gián đoạn.
-
-**Trích phụ đề cháy trong hình** — khoanh vùng chứa phụ đề, chọn ngôn ngữ nguồn
-và chế độ Nhanh / Tự động / Chính xác. OCR đọc chữ ngay trong khung hình rồi
-dựng lại thành file phụ đề.
 
 **Subtitle Workshop** — sửa nội dung và thời gian từng câu, tìm và thay thế,
 tách hoặc gộp câu, kiểm tra tốc độ đọc và lỗi chồng thời gian, đồng bộ theo
