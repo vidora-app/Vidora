@@ -27,10 +27,16 @@ từ hình ảnh và dựng lại thành phụ đề có thể sửa được.
 và thành phần liên thông — không phải bằng hình dạng ký tự. Nó tìm ra dòng phụ
 đề bất kể đó là chữ Hán, kana, Hangul, Kirin, Ả Rập, Devanagari hay Latin.
 
-**70 mã ngôn ngữ, 8 đầu nhận dạng riêng.** Mỗi hệ chữ đi vào đúng model của nó:
-Trung giản thể và phồn thể, Nhật, Hàn, Latin (41 ngôn ngữ, có tiếng Việt), Kirin
-(10), Ả Rập (6), Devanagari (7), Hy Lạp, Thái. Định tuyến sai một hệ chữ không
-cho ra chữ xấu — nó cho ra chuỗi rỗng — nên bảng định tuyến được kiểm tra chặt.
+**Đọc theo hệ chữ, không theo ngôn ngữ.** OCR nhận mặt chữ chứ không hiểu nghĩa,
+nên thứ quyết định là hệ chữ. Vidora có 8 model phủ 9 hệ chữ — Hán giản thể và
+phồn thể, kana, Hangul, Latin, Kirin, Ả Rập, Devanagari, Hy Lạp, Thái — với bảng
+định tuyến 70 mã ngôn ngữ, riêng nhóm Latin đã 41 mã trong đó có tiếng Việt. Đưa
+một hệ chữ vào nhầm model không cho ra chữ xấu mà cho ra chuỗi rỗng, nên bảng
+định tuyến này được kiểm tra chặt.
+
+Chất lượng thực tế khác nhau theo hệ chữ. Các đường được kiểm nhiều nhất là
+tiếng Việt, Anh, Trung, Nhật, Hàn; những hệ chữ còn lại đọc được nhưng chưa có
+số đo riêng. Với phụ đề khó, hãy chạy thử một đoạn trước khi xử lý cả video.
 
 **Bám theo phụ đề di chuyển.** Một khung cố định không đủ: chỗ phụ đề trượt đi
 thì lọt ra ngoài, chỗ khung quét qua thì che nhầm nền trống. Vidora theo dõi
