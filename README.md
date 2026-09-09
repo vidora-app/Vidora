@@ -16,6 +16,17 @@ macOS chưa có trong bản phát hành hiện tại.
 
 Toàn bộ file nằm ở [trang Releases](https://github.com/vidora-app/Vidora/releases/latest).
 
+## Hướng dẫn sử dụng
+
+[Mục lục đầy đủ](docs/README.md) — hoặc đi thẳng tới việc bạn cần:
+
+- [Cài đặt và chạy lần đầu](docs/installation.md)
+- [Tài khoản và bản quyền](docs/license.md)
+- [Trích phụ đề cháy trong hình](docs/hardsub-ocr.md)
+- [Tạo phụ đề từ giọng nói](docs/speech-subtitles.md)
+- [Tải video và âm thanh](docs/downloading.md)
+- [Xử lý sự cố](docs/troubleshooting.md)
+
 ## Tính năng
 
 ### Trích phụ đề cháy trong hình
