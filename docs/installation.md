@@ -4,7 +4,7 @@
 
 | Nền tảng | File |
 | --- | --- |
-| Windows 10/11 x64 | [Vidora-Windows.msi](https://github.com/vidora-app/Vidora/releases/latest/download/Vidora-Windows.msi) |
+| Windows 10/11 x64 | [Vidora-Windows-Setup.exe](https://github.com/vidora-app/Vidora/releases/latest/download/Vidora-Windows-Setup.exe) |
 | Linux x64 | [Vidora-Linux.AppImage](https://github.com/vidora-app/Vidora/releases/latest/download/Vidora-Linux.AppImage) |
 | Linux x64 (Debian/Ubuntu) | [Vidora-Linux.deb](https://github.com/vidora-app/Vidora/releases/latest/download/Vidora-Linux.deb) |
 
@@ -12,7 +12,9 @@ macOS chưa có trong bản phát hành hiện tại.
 
 ## Windows
 
-Mở file `.msi` và làm theo trình cài đặt.
+Mở `Vidora-Windows-Setup.exe` và bấm **Install**. Bộ cài đặt vào tài khoản Windows
+đang dùng (`%LOCALAPPDATA%\Programs\Vidora`), không hỏi quyền quản trị và không
+hiện hộp thoại UAC — cả khi cài lần đầu lẫn khi tự cập nhật sau này.
 
 ### Windows sẽ hiện cảnh báo
 
@@ -46,28 +48,27 @@ Sau đó mở Vidora từ menu ứng dụng.
 
 ## Kiểm tra file trước khi cài
 
-Mỗi bản phát hành kèm `SHA256SUMS.txt` phủ mọi file được công bố.
-
-Linux:
-
-```bash
-sha256sum -c SHA256SUMS.txt --ignore-missing
-```
+Trên [trang Releases](https://github.com/vidora-app/Vidora/releases/latest), GitHub
+hiện mã **SHA-256** ngay cạnh tên từng file. Tính mã của file đã tải rồi so sánh:
 
 Windows PowerShell:
 
 ```powershell
-(Get-FileHash Vidora-Windows.msi -Algorithm SHA256).Hash.ToLower()
+(Get-FileHash .\Vidora-Windows-Setup.exe -Algorithm SHA256).Hash.ToLower()
 ```
 
-So chuỗi in ra với dòng tương ứng trong `SHA256SUMS.txt`. Khớp là file nguyên vẹn.
+Linux:
 
-File `.sig` đi kèm là chữ ký của bản cập nhật. Ứng dụng tự kiểm tra chữ ký này mỗi
-lần tự cập nhật, nên bạn không phải làm gì thủ công.
+```bash
+sha256sum Vidora-Linux.AppImage
+```
+
+Khớp là file nguyên vẹn. Bản cập nhật tự động còn được kiểm tra chữ ký số trước khi
+áp dụng, nên bạn không phải làm gì thủ công cho các lần cập nhật sau.
 
 ## Vì sao file cài lớn
 
-File cài khoảng 1,5 GB vì mang sẵn toàn bộ thứ cần để xử lý ngay trên máy: bộ nhận
+File cài khoảng 1,7–2 GB vì mang sẵn toàn bộ thứ cần để xử lý ngay trên máy: bộ nhận
 dạng chữ, FFmpeg, Python runtime, giọng đọc tiếng Việt và bộ dịch offline.
 
 Đổi lại, cài xong là dùng được ngay, kể cả khi mất mạng. Không có chuyện đang làm

@@ -7,8 +7,8 @@
 Màn hình xanh *"Windows protected your PC"* hiện với mọi file cài chưa mua chứng chỉ
 ký số của Microsoft. Bấm **More info** rồi **Run anyway**.
 
-Muốn chắc chắn file nguyên vẹn thì đối chiếu SHA-256 với `SHA256SUMS.txt` —
-xem [Cài đặt](installation.md#kiểm-tra-file-trước-khi-cài).
+Muốn chắc chắn file nguyên vẹn thì đối chiếu SHA-256 với mã GitHub hiện cạnh từng
+file trên trang Releases — xem [Cài đặt](installation.md#kiểm-tra-file-trước-khi-cài).
 
 ### AppImage không chạy
 
@@ -88,7 +88,7 @@ Cần `gallery-dl`, không nằm trong bộ cài. Xem **Cài đặt → Phụ th
 
 ### Cập nhật xong app không mở
 
-Cài đè bằng file `.msi` mới nhất từ [trang Releases](https://github.com/vidora-app/Vidora/releases/latest).
+Cài đè bằng `Vidora-Windows-Setup.exe` mới nhất từ [trang Releases](https://github.com/vidora-app/Vidora/releases/latest).
 Thư viện và lịch sử không bị mất.
 
 ### Không thấy bản cập nhật
