@@ -1,157 +1,183 @@
 <p align="center">
-  <img src="https://img.shields.io/github/v/release/vidora-app/Vidora?label=phi%C3%AAn%20b%E1%BA%A3n&color=6957ff" alt="Phiên bản mới nhất">
-  <img src="https://img.shields.io/github/downloads/vidora-app/Vidora/total?label=l%C6%B0%E1%BB%A3t%20t%E1%BA%A3i&color=6957ff" alt="Lượt tải">
-  <img src="https://img.shields.io/badge/Windows%2010%2F11-x64-0078d4" alt="Windows 10/11 x64">
-  <img src="https://img.shields.io/badge/Linux-x64-333" alt="Linux x64">
+  <img src="https://img.shields.io/badge/phi%C3%AAn%20b%E1%BA%A3n-v0.20.8%20(Ch%C3%ADnh%20th%E1%BB%A9c)-6957ff?style=for-the-badge" alt="Phiên bản chính thức 0.20.8">
+  <img src="https://img.shields.io/badge/tr%E1%BA%A1ng%20th%C3%A1i-Ho%E1%BA%A1t%20%C4%91%E1%BB%99ng%20%E1%BB%95n%20%C4%91%E1%BB%8Bnh-success?style=for-the-badge" alt="Trạng thái">
+  <img src="https://img.shields.io/badge/Windows%2010%2F11-x64-0078d4?style=for-the-badge" alt="Windows 10/11 x64">
+  <img src="https://img.shields.io/badge/Linux-x64-333?style=for-the-badge" alt="Linux x64">
+  <img src="https://img.shields.io/badge/Gi%E1%BA%A5y%20ph%C3%A9p-MIT-orange?style=for-the-badge" alt="Giấy phép MIT">
 </p>
 
-# Vidora
+<h1 align="center">Vidora v0.20.8</h1>
 
-**Dịch video, tạo phụ đề, lồng tiếng và tải video — trong một ứng dụng desktop.**
+<p align="center">
+  <strong>Giải pháp Desktop toàn diện cho Xử lý Phụ đề, Lồng tiếng AI, Trích xuất Hardsub & Tải Video Đa Nền Tảng</strong>
+</p>
 
-Vidora biến video nước ngoài thành nội dung tiếng Việt (hoặc ngược lại) mà không
-cần chuyển qua lại giữa năm công cụ: trích phụ đề cháy trong hình, nhận dạng
-giọng nói, dịch, đọc lồng tiếng, xoá phụ đề cũ và xuất video hoàn chỉnh. Mọi
-tác vụ nặng chạy ngay trên máy bạn — file của bạn không phải gửi đi đâu.
+<p align="center">
+  <em>Hoạt động Cục bộ (Local-First) &bull; Bảo mật Tuyệt đối &bull; Không Gửi Dữ liệu Ra Ngoài &bull; Sẵn sàng Offline</em>
+</p>
 
 ---
 
-## Tải về
+## 🌟 Giới thiệu
 
-| Nền tảng | Tải | Cài đặt |
-| --- | --- | --- |
-| **Windows 10 / 11 (64-bit)** | [Vidora-Windows-Setup.exe](https://github.com/vidora-app/Vidora/releases/latest/download/Vidora-Windows-Setup.exe) | Chạy file, bấm *Install*. Cài cho tài khoản Windows hiện tại, **không cần quyền quản trị**. |
-| **Linux (64-bit) — AppImage** | [Vidora-Linux.AppImage](https://github.com/vidora-app/Vidora/releases/latest/download/Vidora-Linux.AppImage) | `chmod +x Vidora-Linux.AppImage && ./Vidora-Linux.AppImage` |
-| **Linux — Debian / Ubuntu** | [Vidora-Linux.deb](https://github.com/vidora-app/Vidora/releases/latest/download/Vidora-Linux.deb) | `sudo apt install ./Vidora-Linux.deb` |
+**Vidora** là phần mềm desktop mạnh mẽ giúp người sáng tạo nội dung, biên dịch viên và người dùng cá nhân chuyển ngữ, làm phụ đề, lồng tiếng và xử lý video trọn gói ngay trên máy tính của mình mà không phải chuyển qua lại giữa nhiều công cụ phức tạp.
 
-macOS chưa có trong bản phát hành hiện tại.
+Từ phiên bản **v0.20.8**, Vidora chính thức tích hợp sẵn toàn bộ môi trường xử lý cục bộ: **PaddleOCR** nhận diện 9 ngôn ngữ, **Faster-Whisper** nhận dạng giọng nói chuẩn từng từ, **Smart Fit Voice Dubbing** tự khớp trường độ thoại, công cụ biên tập **Subtitle Workshop** với biểu đồ sóng âm (waveform), cùng runtime **Deno** độc lập tối ưu hóa cho công cụ trích xuất video yt-dlp hiện đại nhất.
 
-Bộ cài nặng khoảng **1,7–2 GB** vì mang sẵn toàn bộ runtime xử lý cục bộ (OCR,
-nhận dạng giọng nói, FFmpeg, yt-dlp). Tải một lần, dùng offline; ứng dụng không
-tải rời rạc thêm gì giữa lúc bạn đang làm việc (trừ model Whisper khi bạn bật
-tính năng tạo phụ đề từ giọng nói).
+---
 
-Tất cả file của mọi phiên bản: [trang Releases](https://github.com/vidora-app/Vidora/releases).
+## 📥 Tải về Phiên bản Chính thức (v0.20.8)
 
-## Bắt đầu trong 3 bước
+Mọi tệp cài đặt chính thức đều được ký số bảo mật và phát hành trực tiếp tại [GitHub Releases v0.20.8](https://github.com/vidora-app/Vidora/releases/tag/v0.20.8).
 
-1. **Cài** Vidora bằng file ở bảng trên và mở ứng dụng.
-2. **Đăng nhập** hoặc tạo tài khoản ngay trong app (*Cài đặt → Tài khoản*).
-3. **Dán mã bản quyền** và bấm *Kích hoạt*. Xong — chi tiết về tài khoản, đổi máy
-   và gia hạn ở [Tài khoản và bản quyền](docs/license.md).
+| Hệ điều hành | Tập tin cài đặt | Dung lượng | Hướng dẫn cài đặt nhanh |
+| :--- | :--- | :---: | :--- |
+| **Windows 10 / 11 (64-bit)** | [**Vidora-Windows-Setup.exe**](https://github.com/vidora-app/Vidora/releases/download/v0.20.8/Vidora-Windows-Setup.exe) | ~1.70 GB | Mở file, nhấn **Install**. Cài đặt riêng cho tài khoản người dùng (`%LOCALAPPDATA%`), **không cần quyền Admin / UAC**. |
+| **Windows (Bản cập nhật)** | [**Vidora-Windows-Update.exe**](https://github.com/vidora-app/Vidora/releases/download/v0.20.8/Vidora-Windows-Update.exe) | ~33 MB | Gói cập nhật siêu nhẹ tự động khi máy đã cài sẵn bản Vidora trước đó. |
+| **Linux (AppImage)** | [**Vidora-Linux.AppImage**](https://github.com/vidora-app/Vidora/releases/download/v0.20.8/Vidora-Linux.AppImage) | ~1.47 GB | Chạy ngay không cần cài đặt:<br>`chmod +x Vidora-Linux.AppImage && ./Vidora-Linux.AppImage` |
+| **Linux (Debian / Ubuntu)** | [**Vidora-Linux.deb**](https://github.com/vidora-app/Vidora/releases/download/v0.20.8/Vidora-Linux.deb) | ~1.34 GB | Cài đặt bằng lệnh:<br>`sudo apt install ./Vidora-Linux.deb` |
 
-## Vidora làm được gì
+> 💡 **Lưu ý về dung lượng**: Bộ cài đặt chứa trọn vẹn toàn bộ runtime xử lý ngoại tuyến (Python runtime, PaddleOCR, Faster-Whisper, FFmpeg, Deno, yt-dlp). Tải một lần, sử dụng vĩnh viễn không lo thiếu thư viện hay phải cài đặt thủ công bên ngoài.
 
-### Phụ đề
+---
 
-- **Trích phụ đề cháy trong hình (OCR)** — đọc thẳng phụ đề đã nung vào khung
-  hình thành file phụ đề sửa được. Nhận diện 9 hệ chữ (Việt, Anh, Trung giản/
-  phồn thể, Nhật, Hàn, Nga, Ả Rập, Thái, Hindi…), bám theo phụ đề di chuyển,
-  tự phân biệt phụ đề với watermark, chạy được video nhiều giờ. Có GPU thì dùng
-  CUDA, không có thì tự chuyển sang CPU. → [Hướng dẫn](docs/hardsub-ocr.md)
-- **Tạo phụ đề từ giọng nói** — nhận dạng cục bộ, mốc thời gian từng từ, tự dò
-  ngôn ngữ, tiếp tục được nếu gián đoạn. → [Hướng dẫn](docs/speech-subtitles.md)
-- **Subtitle Workshop** — sửa nội dung và thời gian từng câu, tìm/thay thế,
-  tách/gộp câu, kiểm tra tốc độ đọc và chồng thời gian, đồng bộ theo waveform.
-  Xuất SRT, VTT, ASS; chuyển đổi hàng loạt.
+## 🧩 Tiện ích Trình duyệt (Browser Extensions)
 
-### Dịch và lồng tiếng
+Gửi trực tiếp liên kết video, danh sách phát hoặc bài viết từ trình duyệt vào hàng đợi tải của Vidora chỉ với 1 cú click:
 
-- **Dịch phụ đề** — dịch offline không cần mạng, hoặc dùng AI bạn tự cấu hình.
-  Kết quả hiện dần theo từng đoạn.
-- **Lồng tiếng AI** — đọc phụ đề đã dịch thành giọng nói tự nhiên, *Smart Fit*
-  tự căn thời lượng cho khớp với lời gốc thay vì bạn phải kéo từng câu.
-- **Xoá phụ đề cũ, giữ nguyên khung hình** — xoá phụ đề nung trong video và
-  dựng lại vùng bị che trước khi ghép phụ đề mới. → [Dịch và lồng tiếng](docs/translate-dub.md)
+- 🌐 **Chrome / Edge / Cốc Cốc / Brave / Chromium**: [Tải tiện ích Chromium (Vidora-Extension-Chromium.zip)](https://github.com/vidora-app/Vidora/releases/download/v0.20.8/Vidora-Extension-Chromium.zip)
+  *(Vào `chrome://extensions`, bật Developer mode, giải nén và chọn Load unpacked)*.
+- 🦊 **Mozilla Firefox**: [Cài tiện ích Firefox đã ký số AMO (Vidora-Extension-Firefox-signed.xpi)](https://github.com/vidora-app/Vidora/releases/download/v0.20.8/Vidora-Extension-Firefox-signed.xpi)
+  *(Kéo thả trực tiếp vào trình duyệt Firefox để kích hoạt ngay)*.
 
-### Tải video
+---
 
-- **YouTube** — một hoặc nhiều URL, tìm theo từ khoá, playlist, chọn chất lượng
-  tới 8K / codec / FPS, chỉ lấy âm thanh, cắt sẵn một khoảng thời gian, tải
-  livestream từ đầu, hẹn giờ, kèm phụ đề / thumbnail / SponsorBlock.
-- **TikTok, Douyin, Bilibili, Instagram, Facebook, X, Youku** và hơn 1.800
-  trang khác. Gallery ảnh, feed creator, chương truyện tranh.
-- **Theo dõi kênh** — bật tự động tải, đặt chu kỳ kiểm tra và bộ lọc; nội dung
-  mới tự về hàng đợi. → [Hướng dẫn](docs/downloading.md)
+## 🚀 Khởi đầu Nhanh trong 3 Bước
 
-### Xử lý và tổ chức
+1. **Cài đặt & Khởi động**: Tải file cài đặt phù hợp ở bảng trên, hoàn tất cài đặt và mở ứng dụng Vidora.
+2. **Đăng nhập & Tài khoản**: Mở **Cài đặt** (biểu tượng bánh răng) &rarr; **Tài khoản** để tạo tài khoản hoặc đăng nhập tài khoản Vidora của bạn.
+3. **Kích hoạt Bản quyền**: Dán mã bản quyền (License Key) và nhấn **Kích hoạt**. Hệ thống hỗ trợ làm việc ngoại tuyến (Offline Leases) liên tục ngay cả khi ngắt mạng.
+   *(Chi tiết tại [Tài liệu Quản lý Bản quyền](docs/license.md))*.
 
-- **Xử lý video bằng lời** — mô tả việc cần làm (cắt, nén, đổi kích thước, tách
-  âm thanh, tạo GIF, chèn watermark, ghép file); Vidora dựng lệnh, cho xem trước
-  rồi mới chạy.
-- **Tóm tắt AI**, **xuất metadata** (CSV, Excel, JSON, Markdown, SQLite, Word…),
-  **thư viện** có tìm kiếm, tag, bộ sưu tập, phát hiện trùng.
-- **Mở rộng** — [plugin](docs/plugins.md), [tải từ xa](docs/remote-download.md),
-  [dòng lệnh](docs/cli.md) và [tiện ích trình duyệt](docs/browser-extension.md).
+---
 
-## Hướng dẫn sử dụng
+## 🎯 Các Trụ cột Tính năng Nổi bật
 
-[Mục lục đầy đủ](docs/README.md) — mỗi trang trả lời một việc cụ thể:
+### 1. Trích xuất Phụ đề Tự động (Offline Subtitle Extraction)
+- **Trích xuất Hardsub OCR**: Đọc thẳng phụ đề đã bị nung cứng vào khung hình video thành file phụ đề có thể chỉnh sửa. Hỗ trợ 9 hệ ngôn ngữ chính (Tiếng Việt, Tiếng Anh, Trung Giản/Phồn thể, Nhật, Hàn, Nga, Ả Rập, Thái, Hindi...). Tự động theo vết phụ đề chuyển động, lọc hình mờ/logo góc video. Tận dụng tối đa sức mạnh GPU NVIDIA qua CUDA hoặc tự chuyển mượt mà sang CPU.
+- **Tạo phụ đề từ giọng nói (Speech-to-Text)**: Nhận dạng lời thoại ngoại tuyến bằng Faster-Whisper, tạo mốc thời gian (timestamps) chính xác từng từ, tự động nhận diện ngôn ngữ nguồn và hỗ trợ khôi phục tiến trình khi bị gián đoạn.
+- **Quy trình Kết hợp (Hybrid)**: Phân tích đồng thời cả dải hình ảnh và âm thanh để đạt độ chính xác phụ đề cao nhất.
 
-| Bắt đầu | Phụ đề | Tải video | Khi trục trặc |
-| --- | --- | --- | --- |
-| [Cài đặt và chạy lần đầu](docs/installation.md) | [Trích phụ đề cháy](docs/hardsub-ocr.md) | [Tải video và âm thanh](docs/downloading.md) | [Xử lý sự cố](docs/troubleshooting.md) |
-| [Tài khoản và bản quyền](docs/license.md) | [Phụ đề từ giọng nói](docs/speech-subtitles.md) | [Tiện ích trình duyệt](docs/browser-extension.md) | |
-| | [Dịch và lồng tiếng](docs/translate-dub.md) | [Tải từ xa](docs/remote-download.md) | |
+### 2. Dịch thuật Đa ngôn ngữ & Lồng tiếng AI Thông minh
+- **Dịch phụ đề linh hoạt**:
+  - *Dịch Offline*: Sử dụng mô hình Argos tích hợp sẵn, dịch hoàn toàn trên máy tính cá nhân, bảo mật dữ liệu tuyệt đối 100%.
+  - *Dịch AI Cloud*: Tích hợp linh hoạt các nhà cung cấp OpenAI, Claude, DeepSeek hoặc Vidora Cloud để xử lý câu văn mượt mà, tự nhiên theo ngữ cảnh.
+- **Lồng tiếng AI & Smart Fit**: Tự động chuyển phụ đề đã dịch thành giọng đọc truyền cảm tự nhiên (kho hàng trăm giọng đọc Việt, Anh, v.v.). Tính năng **Smart Fit** độc quyền tự động tính toán và điều chỉnh nhịp đọc khớp hoàn hảo với trường độ lời thoại video gốc.
+- **Xóa phụ đề gốc (Delogo/Inpainting)**: Xóa sạch dải phụ đề cứng cũ trên video và tái tạo lại khung hình trước khi gắn phụ đề mới.
 
-## Tiện ích trình duyệt
+### 3. Xưởng Biên tập Phụ đề Chuyên nghiệp (Subtitle Workshop)
+- Trực quan hóa tiến trình bằng biểu đồ sóng âm (Audio Waveform) và thanh thời gian đa lớp.
+- Đồng bộ mốc thời gian thời gian thực, tự động gộp/tách câu thông minh theo nhịp ngắt nghỉ.
+- Bộ kiểm tra chất lượng (QC) tự động cảnh báo chồng lấn thời gian (overlap), tốc độ đọc quá nhanh (CPS/CPL).
+- Hỗ trợ đầy đủ các định dạng: **SRT**, **VTT**, **ASS** (cho phép tạo kiểu font chữ, màu sắc, vị trí hiển thị bắt mắt).
 
-Gửi liên kết từ trình duyệt thẳng vào hàng đợi tải của Vidora:
+### 4. Tải Video Tốc độ cao Đa Nền tảng
+- Tải video, âm thanh từ hơn **1.800 trang web**: YouTube, TikTok, Facebook, Instagram, Bilibili, Douyin, X (Twitter), Youku...
+- Hỗ trợ độ phân giải tối đa lên tới **8K**, 60 FPS, chuẩn màu HDR, bộ codec AV1, VP9, H.264, H.265.
+- Tải trọn bộ danh sách phát (Playlist), toàn bộ kênh hoặc tải trước đoạn thời gian mong muốn.
+- Tự động lọc quảng cáo với SponsorBlock, lưu kèm ảnh bìa (thumbnail) chất lượng cao và siêu dữ liệu (metadata).
+- **Theo dõi Kênh Tự động**: Lên lịch tự động kiểm tra kênh yêu thích và tự tải nội dung mới về máy.
 
-- [Chrome / Edge / Chromium](https://github.com/vidora-app/Vidora/releases/latest/download/Vidora-Extension-Chromium.zip)
-- [Firefox](https://github.com/vidora-app/Vidora/releases/latest/download/Vidora-Extension-Firefox-signed.xpi)
+### 5. Xử lý Video bằng Lệnh Tự nhiên & Quản lý Thư viện
+- Cắt, nén dung lượng, đổi kích thước, tách âm thanh, tạo ảnh GIF, chèn watermark bằng câu lệnh mô tả thông thường.
+- Thư viện quản lý tập trung dựa trên SQLite bền bỉ: gắn tag, gom bộ sưu tập, tìm kiếm nhanh và tự phát hiện video trùng lặp.
+- Xuất dữ liệu đa định dạng: Excel, CSV, Word, JSON, Markdown, SQLite.
 
-Cách cài: [Tiện ích trình duyệt](docs/browser-extension.md).
+---
 
-## Yêu cầu máy
+## 💻 Yêu cầu Cấu hình Hệ thống
 
-| | Tối thiểu |
-| --- | --- |
-| Hệ điều hành | Windows 10 trở lên (64-bit) hoặc Linux 64-bit hiện đại |
-| Dung lượng trống | Khoảng 6 GB sau khi cài |
-| Màn hình | Cửa sổ tối thiểu 1100 × 620 |
-| Mạng | Cần Internet để đăng nhập, kích hoạt và tải video; xử lý phụ đề/dịch offline chạy không cần mạng |
-| GPU | Không bắt buộc. Card NVIDIA có CUDA giúp OCR và nhận dạng giọng nói nhanh hơn nhiều |
+| Tiêu chí | Cấu hình Tối thiểu | Cấu hình Khuyến nghị |
+| :--- | :--- | :--- |
+| **Hệ điều hành** | Windows 10/11 (64-bit) / Linux 64-bit | Windows 11 (64-bit) / Ubuntu 22.04 LTS trở lên |
+| **Bộ vi xử lý (CPU)** | Intel Core i3 / AMD Ryzen 3 trở lên | Intel Core i5/i7/i9 / AMD Ryzen 5/7/9 (6 nhân trở lên) |
+| **Bộ nhớ RAM** | 8 GB RAM | 16 GB RAM hoặc cao hơn |
+| **Dung lượng ổ cứng** | 10 GB trống (SSD) | 25 GB trống (NVMe SSD để xử lý video nhanh nhất) |
+| **Card đồ họa (GPU)** | Card tích hợp (chạy CPU mode) | Card đồ họa rời **NVIDIA GTX 1060 / RTX Series** (có hỗ trợ CUDA để tăng tốc OCR và Whisper lên gấp 5–10 lần) |
+| **Mạng Internet** | Cần kết nối khi kích hoạt và tải video | Băng thông ổn định |
 
-Hai công cụ tuỳ chọn cần tự cài nếu dùng tới: `gallery-dl` cho trang Gallery,
-`aria2c` để tăng tốc tải. Mọi thứ khác đã có sẵn trong bộ cài.
+---
 
-## Cập nhật
+## 🛡️ Xác minh Tính toàn vẹn Tập tin (SHA-256 Checksums)
 
-Vidora tự kiểm tra bản mới khi khởi động và **cập nhật tại chỗ** — không cần
-tải lại bộ cài, không hiện hộp thoại quyền quản trị. Mỗi bản cập nhật được kiểm
-tra chữ ký số trước khi áp dụng; file không khớp chữ ký sẽ bị từ chối.
+Đối chiếu mã băm sau khi tải về để đảm bảo tập tin của bạn nguyên vẹn và không bị can thiệp:
 
-## Kiểm tra file trước khi cài
+```text
+Vidora-Windows-Setup.exe:
+1d8fa457cfd52b289984de166ff47910e7d1569c4b45646b7f18f19bb229d297
 
-Trên [trang Releases](https://github.com/vidora-app/Vidora/releases/latest),
-mỗi file đều hiện mã **SHA-256** ngay bên cạnh tên. So sánh với mã bạn tính trên
-máy:
+Vidora-Windows-Update.exe:
+872c13f40e010d7c52a01cbc2e9d9edc14f4494f57b76b2a0a49eb220da19faa
 
+Vidora-Linux.AppImage:
+065f8c9c19046e9b644fe8b7819cb9cdc4d48c14f66bf52f61e5be9249c4dc87
+
+Vidora-Linux.deb:
+98201a13256215f21de5a635b3c595f52c3217eb26b0bf92ec0e1f46a7944634
+
+Vidora-Extension-Chromium.zip:
+2165fa61b39f650fe6c759c166505147f2bfd1c8461d52e064b3ee26a02d19b9
+
+Vidora-Extension-Firefox-signed.xpi:
+799ec5cbb5e27275ce0eefeebe232af6c866bb73c7c8777378d2ba8e1559fdfd
+```
+
+**Cách kiểm tra trên PowerShell (Windows):**
 ```powershell
-# Windows (PowerShell)
 (Get-FileHash .\Vidora-Windows-Setup.exe -Algorithm SHA256).Hash.ToLower()
 ```
 
+**Cách kiểm tra trên Terminal (Linux):**
 ```bash
-# Linux
 sha256sum Vidora-Linux.AppImage
 ```
 
-Nếu Windows SmartScreen hiện cảnh báo với bộ cài mới tải, xem cách xử lý ở
-[Cài đặt và chạy lần đầu](docs/installation.md).
+---
 
-## Hỗ trợ
+## ❓ Xử lý Cảnh báo Windows Defender SmartScreen
 
-- **Báo lỗi**: mở một [Issue](https://github.com/vidora-app/Vidora/issues) kèm
-  phiên bản Vidora, hệ điều hành, thời điểm xảy ra lỗi và file nhật ký (mở
-  trang **Nhật ký** trong app → *Xuất*). Xoá cookie, token và API key khỏi file
-  trước khi đính kèm.
-- **Hỏi đáp và góp ý**: [Discussions](https://github.com/vidora-app/Vidora/discussions).
-- **Lịch sử thay đổi**: ghi chú của từng phiên bản nằm ngay trên
-  [trang Releases](https://github.com/vidora-app/Vidora/releases).
+Khi khởi chạy bộ cài mới trên Windows 10/11, màn hình xanh có thể xuất hiện với nội dung:
+> *"Windows protected your PC - Microsoft Defender SmartScreen prevented an unrecognized app from starting."*
 
-## Giấy phép
+👉 **Cách mở bình thường:**
+1. Nhấn vào dòng chữ **"More info"** (Thông tin khác).
+2. Nhấn nút **"Run anyway"** (Vẫn chạy).
+*(Cảnh báo xuất hiện do bộ cài phần mềm mới xuất xưởng chưa tích lũy chứng chỉ danh tiếng từ máy chủ Microsoft; tập tin hoàn toàn sạch và an toàn)*.
 
-Vidora phát hành theo giấy phép [MIT](LICENSE). Chỉ tải và xử lý nội dung bạn
-sở hữu, được cấp quyền, hoặc pháp luật cho phép.
+---
+
+## 📚 Tài liệu Hướng dẫn Chuyên sâu
+
+Truy cập danh mục tài liệu hướng dẫn đầy đủ tại thư mục [**docs/**](docs/README.md):
+- [Hướng dẫn Cài đặt & Khởi chạy Lần đầu](docs/installation.md)
+- [Quản lý Bản quyền, Tài khoản & Thiết bị](docs/license.md)
+- [Trích xuất Phụ đề Cháy (Hardsub OCR)](docs/hardsub-ocr.md)
+- [Tạo Phụ đề từ Giọng nói (Speech-to-Text)](docs/speech-subtitles.md)
+- [Dịch thuật Phụ đề & Lồng tiếng AI](docs/translate-dub.md)
+- [Tải Video Nâng cao](docs/downloading.md)
+- [Tiện ích Trình duyệt Vidora Extension](docs/browser-extension.md)
+- [Xử lý Sự cố Thường gặp (Troubleshooting)](docs/troubleshooting.md)
+
+---
+
+## 🤝 Hỗ trợ & Liên hệ
+
+- **Báo cáo lỗi & Đóng góp ý kiến**: Mở thảo luận hoặc gửi phản ánh tại [GitHub Issues](https://github.com/vidora-app/Vidora/issues).
+- **Cộng đồng thảo luận**: [GitHub Discussions](https://github.com/vidora-app/Vidora/discussions).
+- **Trang chủ Dịch vụ**: [https://vdora.site](https://vdora.site)
+
+---
+
+## 📜 Giấy phép (License)
+
+Vidora được phát hành theo giấy phép nguồn mở [MIT License](LICENSE). Vui lòng tuân thủ bản quyền nội dung đa phương tiện theo quy định pháp luật sở tại khi sử dụng tính năng tải video.
