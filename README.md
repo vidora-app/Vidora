@@ -36,6 +36,7 @@ Mọi tệp cài đặt chính thức đều được ký số bảo mật và p
 | **Windows (Bản cập nhật)** | [**Vidora-Windows-Update.exe**](https://github.com/vidora-app/Vidora/releases/download/v0.20.8/Vidora-Windows-Update.exe) | ~33 MB | Gói cập nhật siêu nhẹ tự động khi máy đã cài sẵn bản Vidora trước đó. |
 | **Linux (AppImage)** | [**Vidora-Linux.AppImage**](https://github.com/vidora-app/Vidora/releases/download/v0.20.8/Vidora-Linux.AppImage) | ~1.47 GB | Chạy ngay không cần cài đặt:<br>`chmod +x Vidora-Linux.AppImage && ./Vidora-Linux.AppImage` |
 | **Linux (Debian / Ubuntu)** | [**Vidora-Linux.deb**](https://github.com/vidora-app/Vidora/releases/download/v0.20.8/Vidora-Linux.deb) | ~1.34 GB | Cài đặt bằng lệnh:<br>`sudo apt install ./Vidora-Linux.deb` |
+| **Cẩm nang Hướng dẫn** | [**Huong_Dan_Su_Dung_Vidora_v0.20.8.docx**](https://github.com/vidora-app/Vidora/releases/download/v0.20.8/Huong_Dan_Su_Dung_Vidora_v0.20.8.docx) | ~22 KB | File Word (.docx) cẩm nang hướng dẫn sử dụng chi tiết A-Z, phím tắt & khắc phục sự cố. |
 
 > 💡 **Lưu ý về dung lượng**: Bộ cài đặt chứa trọn vẹn toàn bộ runtime xử lý ngoại tuyến (Python runtime, PaddleOCR, Faster-Whisper, FFmpeg, Deno, yt-dlp). Tải một lần, sử dụng vĩnh viễn không lo thiếu thư viện hay phải cài đặt thủ công bên ngoài.
 
