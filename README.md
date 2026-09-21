@@ -158,7 +158,8 @@ Khi khởi chạy bộ cài mới trên Windows 10/11, màn hình xanh có thể
 
 ## 📚 Tài liệu Hướng dẫn Chuyên sâu
 
-Truy cập danh mục tài liệu hướng dẫn đầy đủ tại thư mục [**docs/**](docs/README.md):
+- 📘 **[Tải File Word (.docx) Cẩm nang Hướng dẫn Chi tiết Toàn diện](docs/Huong_Dan_Su_Dung_Vidora_v0.20.8.docx)**: Toàn bộ cẩm nang hướng dẫn đầy đủ từ A-Z được biên soạn sẵn định dạng Word chuẩn, tiện tra cứu ngoại tuyến và in ấn.
+- [Mục lục Tài liệu Trực tuyến](docs/README.md)
 - [Hướng dẫn Cài đặt & Khởi chạy Lần đầu](docs/installation.md)
 - [Quản lý Bản quyền, Tài khoản & Thiết bị](docs/license.md)
 - [Trích xuất Phụ đề Cháy (Hardsub OCR)](docs/hardsub-ocr.md)
